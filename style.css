@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --a:0
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.home{
+    width: 25vw;
+    height: 20vh;
+   background-color: #121212;
+   border-radius: 10px;
+   margin: 8px;
+   font-family: 'Courier New', Courier, monospace;
+   /* padding-left: 20px; */
+
+}
+.library{
+    width: 25vw;
+    height:76vh;
+    background-color: #121212;
+    border-radius: 10px;
+    margin: 8px;
+    position: relative;
+}
+.right{
+    width: 75vw;
+    background-color: rgb(18, 18, 18);
+    height: 97.5vh;
+    border-radius: 10px;
+ margin-top: 8px;
+    margin-right: 5px;
+}
+.playlist{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.plus{
+    display: flex;
+    padding-left: 12vw;
+}
+.footer {
+    display: flex;
+    font-size: 10px;
+    color: grey;
+    gap: 9px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+}
+.footer a{
+    color: grey;
+}
+.header{
+    width: 73.5vw;
+    height: 10vh;
+    background-color: #171616;
+    border-radius: 5px;
+    display: flex;
+justify-content: space-between;}
+.btn-s{
+    background-color: white;
+    color: rgb(0, 0, 0);
+border: none;
+margin-right: 30px;
+cursor: pointer;
+width: 100px;
+height: 50px;
+border-radius: 60px;
+font-weight: bold;
+margin-right: 25px
+}
+.btn-l{
+    background-color: white;
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 60px;
+    font-weight: bold;
+    margin-right: 25px;
+   
+}
+.btn-l:hover{
+    cursor: pointer;
+    background-color:#505050;}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+h1{
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.cardContainer {
+    margin: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 60vh; 
+    /* box-shadow: 0 4px 10px rgb(0, 0, 0, 0.5); */
+    position: absolute;
+}
+
+.card{
+    background-color:rgb(37, 37, 37);
+    position: relative;
+    height: 20vw;
+    width: 13vw;
+    border-radius: 10px;
+}
+.card:hover{
+    background-color:  #4d4d4d;
+    cursor: pointer;
+    --a:1;
+}
+
+.card img {
+    width: 90%;
+    object-fit: contain;
+    padding-top: 10px;
+    padding-left: 8px;
+}
+.card h3{
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card p{
+    padding-top: 15px;
+font-size:12px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    height: 10px; /* Height of the scrollbar (for horizontal scrolling) */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #000; /* Black scrollbar thumb */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Darker gray when hovered */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #1a1a1a; /* Dark gray track */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  ::-webkit-scrollbar-track:hover {
+    background-color: #2a2a2a; /* Slightly lighter track on hover */
+  }
+  .play{
+    position: absolute;
+    top: 55%;
+    right: 10%;
+    display: flex;
+    opacity: var(--a);
+    transition: all 1s ease-out;
+  }
+  .play:hover{
+    opacity: 1;
+    top: 50%;
+    cursor: pointer;
+  }
+.songinfo{
+    width: 20vw;
+}
+.songbuttons{
+    gap: 40px;
+    height: 7vh;
+    width: 73.5vw;
+    background-color: rgb(80, 80, 80);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 2%;
+    display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+}
+.seekbar{
+    width:72.5vw;
+    margin-left: 6px;
+    border-radius: 50px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    cursor: pointer;
+    bottom: 2%;
+    position: fixed;
+}
+.circle{
+    left: 0.5px;
+    position: relative;
+    bottom:180% ;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(255, 255, 255);
+    transition: ease-in-out;
+    cursor: pointer;
+    transition: left 0.5s;
+}
+.songtime{
+    width: 8vw;
+}
+.songlist{
+    height: 344px;
+    overflow: auto;
+}
+.songlist ul{
+list-style-type: decimal;
+font-size: 13px;
+padding: 0px 45px;
+
+}
+.songlist ul li{
+    margin-top: 20px;
+    border: 2px solid #505050;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 5px 0px;
+}
+.playsvg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cursor{
+    cursor: pointer;
+}
+.timevolume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.volume{
+    cursor: pointer;
+    display: flex;
+    width: 2vw;
+    align-items: center;
+}
+.range{
+    cursor: pointer;
+    width: 8vw;
+    height: 0.8vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+input[type="range"] {
+    accent-color: rgb(255, 119, 0);
+  }
+.light{
+    background-color: white;
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 60px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+.btn-s:hover{
+    cursor: pointer;
+    background-color:#505050;
+}
+.light:hover{
+    cursor: pointer;
+}
